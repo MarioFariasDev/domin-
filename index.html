@@ -9,21 +9,31 @@
 <body>
 <div class="container">
     <h1>Marcador de Dominó 🁢</h1>
+
     <div class="scoreboard">
         <div class="team" id="teamA">
             <h2>Time A</h2>
             <div class="score" id="scoreA">0</div>
             <div class="controls">
                 <button onclick="addPoints('A', 5)">+5</button>
+                <button onclick="addPoints('A', 10)">+10</button>
+                <button onclick="addPoints('A', 15)">+15</button>
+                <button onclick="addPoints('A', 20)">+20</button>
                 <button onclick="addPoints('A', -5)">-5</button>
+                <button class="galo" onclick="tocarGalo('A')">🐔 GALO!</button>
             </div>
         </div>
+
         <div class="team" id="teamB">
             <h2>Time B</h2>
             <div class="score" id="scoreB">0</div>
             <div class="controls">
                 <button onclick="addPoints('B', 5)">+5</button>
+                <button onclick="addPoints('B', 10)">+10</button>
+                <button onclick="addPoints('B', 15)">+15</button>
+                <button onclick="addPoints('B', 20)">+20</button>
                 <button onclick="addPoints('B', -5)">-5</button>
+                <button class="galo" onclick="tocarGalo('B')">🐔 GALO!</button>
             </div>
         </div>
     </div>
@@ -37,6 +47,7 @@
     </div>
 </div>
 
+<audio id="galoSound" src="galo.mp3" preload="auto"></audio>
 <script src="script.js"></script>
 </body>
 </html>
