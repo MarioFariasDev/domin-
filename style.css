@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00ffe0;
+  width: 90%;
+  max-width: 500px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.team {
+  background: #1a1a1a;
+  border-radius: 15px;
+  padding: 1rem;
+  width: 45%;
+}
+
+.score {
+  font-size: 3rem;
+  margin: 10px 0;
+  color: #00ffe0;
+}
+
+.controls button {
+  padding: 10px;
+  margin: 5px;
+  font-size: 1rem;
+  background-color: #00ffe0;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  background-color: #00bfa6;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+.actions input {
+  padding: 8px;
+  width: 80px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.actions button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #ff004c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.winner {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #00ff88;
+  font-weight: bold;
+}

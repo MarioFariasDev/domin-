@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Marcador de Dominó</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+    <h1>Marcador de Dominó 🁢</h1>
+    <div class="scoreboard">
+        <div class="team" id="teamA">
+            <h2>Time A</h2>
+            <div class="score" id="scoreA">0</div>
+            <div class="controls">
+                <button onclick="addPoints('A', 5)">+5</button>
+                <button onclick="addPoints('A', -5)">-5</button>
+            </div>
+        </div>
+        <div class="team" id="teamB">
+            <h2>Time B</h2>
+            <div class="score" id="scoreB">0</div>
+            <div class="controls">
+                <button onclick="addPoints('B', 5)">+5</button>
+                <button onclick="addPoints('B', -5)">-5</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="winner" id="winner"></div>
+
+    <div class="actions">
+        <label for="maxPoints">Pontuação Final:</label>
+        <input type="number" id="maxPoints" value="100" min="50" />
+        <button onclick="resetGame()">Resetar</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
