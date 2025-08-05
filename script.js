@@ -1,44 +1,17 @@
-let scoreA = 0;
-let scoreB = 0;
+let scores = [0, 0, 0];
 
-function addPoints(team, value) {
-    const max = parseInt(document.getElementById("maxPoints").value);
+function addPoints(player, value) {
+    scores[player] += value;
+    if (scores[player] < 0) scores[player] = 0;
+    document.getElementById(`score${player}`).textContent = scores[player];
+}
 
-    if (team === 'A') {
-        scoreA = Math.max(0, scoreA + value);
-        document.getElementById("scoreA").textContent = scoreA;
+function checkGalo(player) {
+    if (scores[player] >= 50) {
+        const audio = document.getElementById("galoAudio");
+        audio.play();
+        alert(`🐓 Galo cantou para o Jogador ${player}!`);
     } else {
-        scoreB = Math.max(0, scoreB + value);
-        document.getElementById("scoreB").textContent = scoreB;
+        alert("Ainda não chegou a 50 pontos!");
     }
-
-    checkWinner(max);
-}
-
-function checkWinner(max) {
-    const winnerEl = document.getElementById("winner");
-    if (scoreA >= max && scoreB >= max) {
-        winnerEl.textContent = "Empate!";
-    } else if (scoreA >= max) {
-        winnerEl.textContent = "🏆 Time A venceu!";
-    } else if (scoreB >= max) {
-        winnerEl.textContent = "🏆 Time B venceu!";
-    } else {
-        winnerEl.textContent = "";
-    }
-}
-
-function resetGame() {
-    scoreA = 0;
-    scoreB = 0;
-    document.getElementById("scoreA").textContent = 0;
-    document.getElementById("scoreB").textContent = 0;
-    document.getElementById("winner").textContent = "";
-}
-
-function tocarGalo(team) {
-    const audio = document.getElementById("galoSound");
-    audio.currentTime = 0;
-    audio.play();
-    addPoints(team, 50);
 }
