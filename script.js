@@ -35,3 +35,10 @@ function resetGame() {
     document.getElementById("scoreB").textContent = 0;
     document.getElementById("winner").textContent = "";
 }
+
+function tocarGalo(team) {
+    const audio = document.getElementById("galoSound");
+    audio.currentTime = 0;
+    audio.play();
+    addPoints(team, 50);
+}
