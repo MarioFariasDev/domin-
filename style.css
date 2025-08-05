@@ -1,103 +1,78 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  font-family: Arial, sans-serif;
+  background: #1a1a1a;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .container {
-  text-align: center;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 0 20px #00ffe0;
-  width: 90%;
-  max-width: 500px;
-}
-
-h1 {
-  margin-bottom: 20px;
-  font-size: 2rem;
-}
-
-.scoreboard {
   display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
 }
 
-.team {
-  background: #1a1a1a;
+.player {
+  background: #2c2c2c;
+  padding: 20px;
   border-radius: 15px;
-  padding: 1rem;
-  width: 45%;
-  min-width: 180px;
+  text-align: center;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+.player-2 {
+  transform: rotate(180deg);
 }
 
 .score {
-  font-size: 3rem;
+  font-size: 4rem;
   margin: 10px 0;
-  color: #00ffe0;
 }
 
-.controls button {
-  padding: 10px;
-  margin: 5px;
-  font-size: 1rem;
-  background-color: #00ffe0;
-  color: #000;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
-.controls button:hover {
-  background-color: #00bfa6;
-}
-
-button.galo {
-  background-color: #ffaa00;
-  color: black;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-button.galo:hover {
-  background-color: #ffcc33;
-}
-
-.actions {
-  margin-top: 20px;
-}
-
-.actions input {
-  padding: 8px;
-  width: 80px;
-  margin-left: 10px;
-  text-align: center;
-}
-
-.actions button {
-  margin-top: 10px;
+button {
   padding: 10px 20px;
-  background: #ff004c;
-  color: white;
+  font-size: 1.2rem;
   border: none;
   border-radius: 8px;
-  font-weight: bold;
   cursor: pointer;
+  background: #4caf50;
+  color: #fff;
+  transition: background 0.3s;
 }
 
-.winner {
-  font-size: 1.5rem;
-  margin-top: 20px;
-  color: #00ff88;
-  font-weight: bold;
+button:hover {
+  background: #388e3c;
+}
+
+button.minus {
+  background: #e53935;
+}
+
+button.minus:hover {
+  background: #c62828;
+}
+
+@media (max-width: 600px) {
+  .score {
+    font-size: 3rem;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 1rem;
+  }
 }
