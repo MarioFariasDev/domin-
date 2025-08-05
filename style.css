@@ -28,6 +28,8 @@ h1 {
   display: flex;
   justify-content: space-around;
   margin: 20px 0;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .team {
@@ -35,6 +37,7 @@ h1 {
   border-radius: 15px;
   padding: 1rem;
   width: 45%;
+  min-width: 180px;
 }
 
 .score {
@@ -57,6 +60,17 @@ h1 {
 
 .controls button:hover {
   background-color: #00bfa6;
+}
+
+button.galo {
+  background-color: #ffaa00;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+button.galo:hover {
+  background-color: #ffcc33;
 }
 
 .actions {
